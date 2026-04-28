@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>교회 브랜딩 링크 모음</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", "맑은 고딕", sans-serif;
+    background: #f7f7f9;
+    color: #1f2937;
+    line-height: 1.55;
+  }
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  #cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    align-items: stretch;
+  }
+  @media (max-width: 1024px) {
+    #cards { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    #cards { grid-template-columns: 1fr; }
+  }
+  h1 {
+    font-size: 22px;
+    margin: 0 0 4px;
+    color: #111827;
+  }
+  .subtitle {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .church-name-box {
+    background: #fff;
+    border: 2px solid #4f46e5;
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 6px rgba(79, 70, 229, 0.08);
+  }
+  .church-name-box label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4f46e5;
+    margin-bottom: 8px;
+    letter-spacing: 0.02em;
+  }
+  .church-name-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #111827;
+    background: transparent;
+    padding: 4px 0;
+  }
+  .church-name-box .hint {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-top: 6px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+  }
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .card-num {
+    flex: 0 0 28px;
+    height: 28px;
+    background: #4f46e5;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+  }
+  .link-row {
+    display: block;
+    background: #f3f4f6;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 13px;
+    color: #4f46e5;
+    text-decoration: none;
+    word-break: break-all;
+    margin-bottom: 12px;
+    transition: background 0.15s;
+  }
+  .link-row:hover {
+    background: #e5e7eb;
+  }
+  textarea {
+    width: 100%;
+    flex: 1;
+    min-height: 280px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.6;
+    resize: vertical;
+    outline: none;
+    color: #1f2937;
+    background: #fafafa;
+  }
+  textarea:focus {
+    border-color: #4f46e5;
+    background: #fff;
+  }
+  .copy-btn {
+    margin-top: 10px;
+    width: 100%;
+    background: #4f46e5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.05s;
+    font-family: inherit;
+  }
+  .copy-btn:hover { background: #4338ca; }
+  .copy-btn:active { transform: scale(0.98); }
+  .copy-btn.copied { background: #10b981; }
+  .footer {
+    margin-top: 32px;
+    padding: 18px 20px;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  .contact {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111827;
+  }
+  .reset-btn {
+    background: transparent;
+    border: 1px solid #d1d5db;
+    color: #6b7280;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+  }
+  .reset-btn:hover {
+    background: #f3f4f6;
+    color: #ef4444;
+    border-color: #fca5a5;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>📋 컨빌디자인 · 교회 브랜딩 링크 모음</h1>
+  <p class="subtitle">메시지를 받으실 교회 이름을 입력하면 모든 안내말과 5번 링크 URL이 자동으로 갱신됩니다.</p>
+
+  <div class="church-name-box">
+    <label for="churchName">받으실 교회 이름</label>
+    <input type="text" id="churchName" placeholder="예: 컨빌교회 / 사랑의교회 등">
+    <div class="hint">입력 즉시 5개 안내말 안의 교회 이름과 5번 현수막 링크의 ?church= 값이 변경됩니다.</div>
+  </div>
+
+  <div id="cards"></div>
+
+  <div class="footer">
+    <div class="contact">📞 상담/문의: 010-7204-8009</div>
+    <button class="reset-btn" id="resetBtn">기본값으로 초기화</button>
+  </div>
+</div>
+
+<script>
+  const STORAGE_KEY = 'church-links-state-v3';
+  const DEFAULT_CHURCH = '컨빌교회';
+
+  const LINKS = [
+    {
+      title: '컨빌디자인 홈페이지 (포트폴리오·서비스)',
+      url: 'https://convill-homepage-ver2.vercel.app/',
+      dynamicUrl: false,
+      defaultMessage:
+        '안녕하세요 {{교회이름}} 대표님~!\n컨빌디자인입니다 :)\n\n저희 컨빌디자인 홈페이지 안내드립니다 ^^\n그동안 진행했던 교회 프로젝트 포트폴리오와\n제공하는 서비스들을 확인하실 수 있습니다.\n\n시간 되실 때 천천히 둘러봐주시고,\n궁금하신 점 있으시면 편하게 연락 주세요 :)'
+    },
+    {
+      title: '교회 브랜딩 문의 구글폼',
+      url: 'https://forms.gle/muAYxA6t7CqYeK4U7',
+      dynamicUrl: false,
+      defaultMessage:
+        '안녕하세요 {{교회이름}} 대표님~!\n컨빌디자인입니다 :)\n\n{{교회이름}} 브랜딩 작업을 시작하기 전,\n아래 구글폼 작성 부탁드립니다 ^^\n\n교회의 정보와 방향성을 함께 나눠주시면\n작업에 큰 도움이 됩니다.\n\n편하실 때 천천히 작성해주시면 됩니다 :)'
+    },
+    {
+      title: '로고 프로세스 안내 및 질문지 작성',
+      url: 'https://connectvillage-hub.github.io/convil-logo-process/',
+      dynamicUrl: false,
+      defaultMessage:
+        '안녕하세요 {{교회이름}} 대표님~!\n컨빌디자인입니다 :)\n\n{{교회이름}} 로고 제작 프로세스 안내드립니다 ^^\n아래 페이지에서 진행 과정 한번 살펴보시고,\n질문지 작성 부탁드립니다 :)\n\n작성해주신 내용 바탕으로 시안 작업 진행해보겠습니다. 감사합니다!'
+    },
+    {
+      title: '로고 시안 전송 / 시안 선택 및 수정사항',
+      url: 'https://connectvillage-hub.github.io/convil-logo-review/',
+      dynamicUrl: false,
+      defaultMessage:
+        '안녕하세요 {{교회이름}} 대표님~!\n컨빌디자인입니다 :)\n\n기다려주셔서 감사합니다 ^^\n{{교회이름}} 로고 시안 전송드립니다.\n\n아래 페이지에서 시안 확인해보시고,\n마음에 드시는 시안 선택과 수정사항 작성해주시면 됩니다 :)\n\n※ 수정은 2회 무상으로 진행되며, 이후에는 추가 비용이 발생할 수 있으니\n수정사항이 있으시면 한꺼번에 취합해서 보내주시면 감사하겠습니다 ^^'
+    },
+    {
+      title: '교회 현수막 안내 랜딩페이지',
+      url: 'https://connectvillage-hub.github.io/church-banner/',
+      dynamicUrl: true,
+      defaultMessage:
+        '안녕하세요 {{교회이름}} 대표님~!\n컨빌디자인입니다 :)\n\n{{교회이름}} 현수막 안내 페이지 전송드립니다 ^^\n아래 링크에서 디자인 확인해보시고,\n의견이나 수정사항 있으시면 편하게 말씀 주세요 :)'
+    }
+  ];
+
+  function loadState() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return null;
+      return JSON.parse(raw);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function saveState(state) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    } catch (e) {}
+  }
+
+  function applyTemplate(template, churchName) {
+    return template.split('{{교회이름}}').join(churchName);
+  }
+
+  function buildUrl(link, churchName) {
+    if (!link.dynamicUrl) return link.url;
+    return link.url + '?church=' + encodeURIComponent(churchName);
+  }
+
+  let state = loadState();
+  if (!state || !Array.isArray(state.messages) || state.messages.length !== LINKS.length) {
+    state = {
+      churchName: DEFAULT_CHURCH,
+      messages: LINKS.map(l => applyTemplate(l.defaultMessage, DEFAULT_CHURCH))
+    };
+  }
+
+  const churchInput = document.getElementById('churchName');
+  const cardsContainer = document.getElementById('cards');
+  const resetBtn = document.getElementById('resetBtn');
+
+  churchInput.value = state.churchName;
+  let previousChurchName = state.churchName;
+
+  function renderCards() {
+    cardsContainer.innerHTML = '';
+    LINKS.forEach((link, idx) => {
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      const header = document.createElement('div');
+      header.className = 'card-header';
+      const num = document.createElement('div');
+      num.className = 'card-num';
+      num.textContent = String(idx + 1);
+      const title = document.createElement('div');
+      title.className = 'card-title';
+      title.textContent = link.title;
+      header.appendChild(num);
+      header.appendChild(title);
+
+      const linkAnchor = document.createElement('a');
+      linkAnchor.className = 'link-row';
+      linkAnchor.target = '_blank';
+      linkAnchor.rel = 'noopener noreferrer';
+      const url = buildUrl(link, state.churchName || DEFAULT_CHURCH);
+      linkAnchor.href = url;
+      linkAnchor.textContent = url;
+      linkAnchor.dataset.linkIdx = String(idx);
+
+      const textarea = document.createElement('textarea');
+      textarea.value = state.messages[idx];
+      textarea.dataset.idx = String(idx);
+      textarea.addEventListener('input', () => {
+        state.messages[idx] = textarea.value;
+        saveState(state);
+      });
+
+      const btn = document.createElement('button');
+      btn.className = 'copy-btn';
+      btn.textContent = '📋 안내말 + 링크 복사';
+      btn.addEventListener('click', () => copyEntry(idx, btn));
+
+      card.appendChild(header);
+      card.appendChild(linkAnchor);
+      card.appendChild(textarea);
+      card.appendChild(btn);
+      cardsContainer.appendChild(card);
+    });
+  }
+
+  function refreshDynamicLinks() {
+    const churchName = state.churchName || DEFAULT_CHURCH;
+    document.querySelectorAll('.link-row').forEach(a => {
+      const idx = Number(a.dataset.linkIdx);
+      const url = buildUrl(LINKS[idx], churchName);
+      a.href = url;
+      a.textContent = url;
+    });
+  }
+
+  async function copyEntry(idx, btn) {
+    const message = state.messages[idx] || '';
+    const url = buildUrl(LINKS[idx], state.churchName || DEFAULT_CHURCH);
+    const text = message + '\n\n' + url;
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (e) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (err) {}
+      document.body.removeChild(ta);
+    }
+    const original = btn.textContent;
+    btn.textContent = '✓ 복사됨!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.classList.remove('copied');
+    }, 1500);
+  }
+
+  churchInput.addEventListener('input', () => {
+    const newName = churchInput.value.trim() || DEFAULT_CHURCH;
+    const oldName = previousChurchName || DEFAULT_CHURCH;
+    if (newName === oldName) return;
+    state.messages = state.messages.map(m => m.split(oldName).join(newName));
+    state.churchName = newName;
+    previousChurchName = newName;
+    document.querySelectorAll('textarea').forEach(ta => {
+      const i = Number(ta.dataset.idx);
+      ta.value = state.messages[i];
+    });
+    refreshDynamicLinks();
+    saveState(state);
+  });
+
+  resetBtn.addEventListener('click', () => {
+    if (!confirm('모든 안내말과 교회 이름을 기본값으로 되돌릴까요?')) return;
+    localStorage.removeItem(STORAGE_KEY);
+    location.reload();
+  });
+
+  renderCards();
+</script>
+</body>
+</html>
